@@ -113,7 +113,9 @@ cut -d "|" -f 1 file22
 
 cut -d "|" -f 2 file22
 ## OUTPUT
-
+Ram
+tom
+Jor
 
 cat < newfile 
 ```
@@ -127,18 +129,17 @@ hello world
  
 grep Hello newfile 
 ## OUTPUT
-
-
+Hello world
 
 grep hello newfile 
 ## OUTPUT
-
+hello world
 
 
 
 grep -v hello newfile 
 ## OUTPUT
-
+Hello world
 
 
 cat newfile | grep -i "hello"
