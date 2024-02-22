@@ -499,27 +499,34 @@ www.mrcet.com
 #Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
-tar: can't open 'bench.py': I/O error
 file21
 file22
 file23
-tar: can't open 'hello.c': I/O error
-tar: can't open 'hello.js': I/O error
-newfile
-tar: can't open 'readme.txt': I/O error
+bench.py
+hello.c
+hello.js
+readme.txt
 urllist.txt
-tar: error exit delayed from previous errors
 
-mkdir backupdir
+
  
 mv backup.tar backupdir
  
 tar -tvf backup.tar
 ## OUTPUT
-
+-rw-r--r-- root/root       114 2020-07-05 23:17:07 bench.py
+-rw-r--r-- root/root        76 2020-07-03 14:45:56 hello.c
+-rw-r--r-- root/root        22 2020-06-26 14:57:33 hello.js
+-rw-r--r-- root/root       151 2020-07-05 23:19:13 readme.txt
+-rw-r--r-- root/root        52 2024-02-22 09:12:52 urllist.txt
 
 tar -xvf backup.tar
 ## OUTPUT
+bench.py
+hello.c
+hello.js
+readme.txt
+urllist.txt
 
 gzip backup.tar
 
@@ -550,7 +557,9 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
-
+hello in this world
+i cant stop
+for this non stop movement
 
 cat < scriptest.sh 
 ```bash
