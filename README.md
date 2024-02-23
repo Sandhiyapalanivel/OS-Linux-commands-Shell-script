@@ -24,10 +24,7 @@ Testing the commands for the desired output.
 ### Create the following files file1, file2 as follows:
 cat > file1
 ```
-chanchal singhvi
-c.k. shukla
-s.n. dasgupta
-sumit chakrobarty
+>
 ^d
 ```
 cat > file2
@@ -545,7 +542,7 @@ echo 'echo Hello World‘; exit 0 >> my-script.sh
 chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
-
+Hello World
  
 cat << stop > herecheck.txt
 ```
@@ -597,10 +594,52 @@ chmod 777 scriptest.sh
 ./scriptest.sh 1 2 3
 
 ## OUTPUT
-
- 
+File name is ./scriptest.sh
+File name is  scriptest.sh
+First arg. is 1
+Second arg. is 2
+Third arg. is 3
+Fourth arg. is
+The $@ is  1 2 3
+The $\# is  1#
+The $$ is  93
+PID   USER     TIME  COMMAND
+    1 root      0:01 {init} /bin/sh /sbin/init
+    2 root      0:00 [kthreadd]
+    3 root      0:00 [kworker/0:0]
+    4 root      0:00 [kworker/0:0H]
+    5 root      0:00 [kworker/u2:0]
+    6 root      0:00 [mm_percpu_wq]
+    7 root      0:00 [ksoftirqd/0]
+    8 root      0:00 [kdevtmpfs]
+    9 root      0:00 [oom_reaper]
+   10 root      0:00 [writeback]
+   11 root      0:00 [kcompactd0]
+   12 root      0:00 [crypto]
+   13 root      0:00 [bioset]
+   14 root      0:00 [kblockd]
+   15 root      0:00 [kworker/0:1]
+   16 root      0:00 [kswapd0]
+   17 root      0:00 [bioset]
+   34 root      0:00 [khvcd]
+   35 root      0:00 [bioset]
+   36 root      0:00 [bioset]
+   37 root      0:00 [bioset]
+   38 root      0:00 [bioset]
+   39 root      0:00 [bioset]
+   40 root      0:00 [bioset]
+   41 root      0:00 [bioset]
+   42 root      0:00 [bioset]
+   55 root      0:00 settime -d /
+   56 root      0:00 dhcpcd -q
+   61 root      0:00 sh -l
+   62 root      0:00 [kworker/u2:1]
+   93 root      0:00 {busybox} ash ./scriptest.sh 1 2 3
+   95 root      0:00 ps
+   
 ls file1
 ## OUTPUT
+file1
 
 echo $?
 ## OUTPUT 
@@ -609,12 +648,13 @@ bash: ./one: Permission denied
  
 echo $?
 ## OUTPUT 
+ 0
  
-abcd
+
  
 echo $?
  ## OUTPUT
-
+ 0
 
  
 # mis-using string comparisons
@@ -653,7 +693,7 @@ chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
-
+baseball is less than hockey
 
 # check file ownership
 cat < psswdperm.sh 
@@ -680,6 +720,7 @@ fi
  ```
 ./psswdperm.sh
 ## OUTPUT
+“You are the owner of the /etc/passwd file”
 
 # check if with file location
 cat>ifnested.sh 
@@ -726,6 +767,8 @@ fi
 
 ./ifnested.sh 
 ## OUTPUT
+/root The object exists, is it a file?
+No,/root it is not a file!
 
 
 
@@ -770,6 +813,8 @@ $ chmod 755 iftest.sh
  
 $ ./iftest.sh 
 ##OUTPUT
+The test value 10 is greater than 5
+The values are different
 
 # check if a file
 cat > ifnested.sh 
@@ -819,6 +864,8 @@ $ chmod 755 ifnested.sh
  
 $ ./ifnested.sh 
 ##OUTPUT
+/root The object exists, is it a file?
+No,/root it is not a file!
 
 # looking for a possible value using elif
 cat elifcheck.sh 
@@ -847,11 +894,15 @@ $ chmod 755 elifcheck.sh
  
 $ ./elifcheck.sh 
 ## OUTPUT
-
+ash: Ram: unknown operand
+ash: Rahim: unknown operand
+ash: Robert: unknown operand
+ash: gganesh: unknown operand
+Sorry, you are not allowed here
 
 # testing compound comparisons
 cat> ifcompound.sh 
-```bash
+```bash:
 \#!/bin/bash
 if [ -d $HOME ] && [ -w $HOME ]
 then
@@ -863,6 +914,7 @@ fi
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh 
 ## OUTPUT
+The file exists and you can write to it
 
 # using the case command
 cat >casecheck.sh 
@@ -882,8 +934,10 @@ esac
 $ chmod 755 casecheck.sh 
  
 $ ./casecheck.sh 
+ ## OUTPUT:
+ Sorry, you are not allowed here
  
-cat > whiletest
+cat > whiletest.sh
 ```bash
 #!/bin/bash
 #while command test
