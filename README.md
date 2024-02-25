@@ -951,7 +951,9 @@ done
 $ chmod 755 whiletest.sh
  
 $ ./whiletest.sh
- 
+## OUTPUT:
+Welcome Ram/Rahim Please enjoy your visit Special testing account gganesh, Do not forget to logout when you're done Sorry, you are not
+allowed here Sorry, you are not allowed here
  
 cat untiltest.sh 
 ```bash
@@ -964,7 +966,8 @@ var1=$[ $var1 - 25 ]
 done
 ``` 
 $ chmod 755 untiltest.sh
- 
+#OUTPUT:
+10 9 8 7 6 5 4 3 2 1
  
  
 cat forin1.sh 
@@ -978,7 +981,8 @@ done
  ```
  
 $ chmod 755 forin1.sh
- 
+#OUTPUT:
+100 75 50 25
  
 cat forin2.sh 
 ```bash
@@ -991,7 +995,10 @@ done
  ```
  
 $ chmod 755 forin2.sh
- 
+#OUTPUT:
+The next state is Alabama The next state is Alaska The next state is Arizona The next state is Arkansas The next state is California The next
+state is Colorado 
+
 cat forin2.sh 
 ```bash
 \#!/bin/bash
@@ -1004,7 +1011,9 @@ done
 $ chmod 755 forin2.sh
  
 $ ./forin2.sh 
- 
+#OUTPUT:
+“word:I” “word:dont know if thisll” “word:work
+
 cat forin3.sh 
 ```bash
 \#!/bin/bash
@@ -1015,7 +1024,8 @@ echo "word:$test"
 done
 ```
 $ ./forin3.sh 
- 
+#OUTPUT:
+word:I word:don't word:know word:if word:this'll word:work 
 cat forin1.sh 
 ```bash
 #!/bin/bash
@@ -1028,6 +1038,9 @@ done
 $ chmod 755 forin1.sh
 
 ## OUTPUT
+The next state is Alabama The next state is Alaska The next state is Arizona The next state is Arkansas The next state is California The next
+state is Colorado
+
 cat forinfile.sh 
 ```bash
 #!/bin/bash
@@ -1040,6 +1053,10 @@ done
 ```
 $ chmod 777 forinfile.sh
 $ cat cities
+#OUTPUT:
+Visit beautiful Hyderabad Visit beautiful Alampur Visit beautiful Basara Visit beautiful Warangal Visit beautiful Adilabad Visit beautiful
+Bhadrachalam Visit beautiful Khammam
+
 Hyderabad
 Alampur
 Basara
@@ -1049,7 +1066,7 @@ Bhadrachalam
 Khammam
 
 ## OUTPUT
-
+The value of i is 1 The value of i is 2 The value of i is 3 The value of i is 4 The value of i is 5
 
 cat forctype.sh 
 ```bash
@@ -1162,7 +1179,7 @@ echo "Hello $name, welcome to my program. “
 $ chmod 755 exread1.sh 
 
 ## OUTPUT
-
+Enter your name: SANDHIYA Hello SANDHIYA, welcome to my program.
 
 
 $ ./exread1.sh 
@@ -1182,12 +1199,13 @@ else
 echo "Usage: badtest1 a b"
 fi
 ```
-## OUTPUT
  ./funcex.sh 
+ ./funcex.sh 1 2
+ 
+## OUTPUT
+The result is 2
 
  
- ./funcex.sh 1 2
-
  
 cat argshift.sh
 ```bash
@@ -1198,9 +1216,10 @@ cat argshift.sh
 done
 ```
 $ chmod 777 argshift.sh
+$ ./argshift.sh 1 2 3
 
 ## OUTPUT
-$ ./argshift.sh 1 2 3
+1 2 3
  
  cat argshift1.sh
 ```bash
@@ -1216,9 +1235,10 @@ for (( i=0;i<$ELEMENTS;i++)); do
 done
 ```
 $ chmod 777 argshift.sh
-## OUTPUT
 $ ./argshift.sh 1 2 3
- 
+
+## OUTPUT
+1 2 3
 cat argshift.sh
 ```bash
 #!/bin/bash 
@@ -1229,10 +1249,12 @@ while (( "$#" )); do
 done
 set +x
 ```
-## OUTPUT
+
  ./argshift.sh 1 2 3
- 
- 
+ ## OUTPUT
+(( 0 ))
+set +x
+
 cat > nc.awk
 ```bash
 BEGIN{}
@@ -1262,7 +1284,9 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
- 
+7 bcdfghj 8 abcdfghj 7 bcdfghj 8 ebcdfghj 7 bcdfghj 8 ibcdfghj 7 bcdfghj 8 obcdfghj 7 bcdfghj 8 ubcdfghj total characters 75 Number of
+Lines are 10 No of Words count: 10
+
 cat > palindrome.sh
 ```bash
 #num=545
@@ -1289,7 +1313,8 @@ else
 fi
 ```
 ## OUTPUT 
-
+Enter the number 121 Number is palindrome Enter the number 69 Number is NOT palindrome
+RESULT
 
 # RESULT:
 The Commands are executed successfully.
