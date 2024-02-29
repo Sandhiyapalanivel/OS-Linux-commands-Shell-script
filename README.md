@@ -966,7 +966,7 @@ var1=$[ $var1 - 25 ]
 done
 ``` 
 $ chmod 755 untiltest.sh
-#OUTPUT:
+## OUTPUT:
 10 9 8 7 6 5 4 3 2 1
  
  
@@ -981,7 +981,7 @@ done
  ```
  
 $ chmod 755 forin1.sh
-#OUTPUT:
+## OUTPUT:
 100 75 50 25
  
 cat forin2.sh 
@@ -995,7 +995,7 @@ done
  ```
  
 $ chmod 755 forin2.sh
-#OUTPUT:
+## OUTPUT:
 The next state is Alabama The next state is Alaska The next state is Arizona The next state is Arkansas The next state is California The next
 state is Colorado 
 
@@ -1011,7 +1011,7 @@ done
 $ chmod 755 forin2.sh
  
 $ ./forin2.sh 
-#OUTPUT:
+## OUTPUT:
 “word:I” “word:dont know if thisll” “word:work
 
 cat forin3.sh 
@@ -1024,7 +1024,7 @@ echo "word:$test"
 done
 ```
 $ ./forin3.sh 
-#OUTPUT:
+## OUTPUT:
 word:I word:don't word:know word:if word:this'll word:work 
 cat forin1.sh 
 ```bash
@@ -1053,7 +1053,7 @@ done
 ```
 $ chmod 777 forinfile.sh
 $ cat cities
-#OUTPUT:
+## OUTPUT:
 Visit beautiful Hyderabad Visit beautiful Alampur Visit beautiful Basara Visit beautiful Warangal Visit beautiful Adilabad Visit beautiful
 Bhadrachalam Visit beautiful Khammam
 
@@ -1079,7 +1079,6 @@ done
 ````
 $ chmod 755 forctype.sh
 $ ./forctype.sh 
-## OUTPUT
 
 cat forctype1.sh 
 ```bash
@@ -1110,8 +1109,8 @@ done
 $ chmod 755 fornested1.sh
  
 $ ./fornested1.sh 
- ## OUTPUT
-
+## OUTPUT
+1 - 5 2 - 4 3 - 3 4 - 2 5 - 1
  
 cat forbreak.sh 
 ```bash
@@ -1127,11 +1126,11 @@ echo "Iteration number: $var1"
 done
 echo "The for loop is completed“
 ```
-## OUTPUT
 
-$ chmod 755 forbreak.sh
- 
+$ chmod 755 forbreak.sh 
 $ ./forbreak.sh 
+## OUTPUT
+1 - 5 2 - 4 3 - 3 4 - 2 5 - 1
  
 cat forbreak.sh 
 ```bash
@@ -1153,6 +1152,7 @@ $ chmod 755 forcontinue.sh
  
 $ ./forcontinue.sh 
 ## OUTPUT
+Iteration number: 1 Iteration number: 2 The for loop is completed
  
 cat exread.sh 
 ```bash
@@ -1167,7 +1167,7 @@ $ chmod 755 exread.sh
  
 $ ./exread.sh 
 ## OUTPUT
-
+Iteration number: 1 Iteration number: 2 Iteration number: 4 Iteration number: 5 The for loop is comp
 
  cat exread1.sh
 ```bash
